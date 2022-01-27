@@ -19,7 +19,7 @@ window_bindings() {
 
 	tmux bind "|" split-window -h
 	tmux bind "-" split-window -v
-	tmux bind "_" split-window -vv
+	tmux bind "_" split-window -fv
 	tmux unbind '"'
 	tmux unbind "%"
 
