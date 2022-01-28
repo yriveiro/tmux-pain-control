@@ -23,5 +23,4 @@ main() {
 	pane_bindings
 	window_bindings
 }
-
 main
