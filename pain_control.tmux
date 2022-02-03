@@ -16,7 +16,7 @@ window_bindings() {
 	tmux unbind '"'
 	tmux unbind "%"
 
-	tmux bind-key "C" command-prompt -p "Window Name: " "new-window -n '%%'"
+	tmux bind-key "C" command-prompt -p "Window Name: " "new-window -n '%%' -c '$HOME'"
 }
 
 main() {
