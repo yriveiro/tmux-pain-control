@@ -11,15 +11,15 @@ window_bindings() {
 	tmux bind-key -n M-S-Left previous-window
 	tmux bind-key -n M-S-Right next-window
 
-	tmux bind-key "|" split-window -h
-	tmux bind-key "-" split-window -v
+	tmux bind-key "|" split-window -h -c '#{pane_current_path}'
+	tmux bind-key "-" split-window -v -c '#{pane_current_path}'
 	tmux unbind '"'
 	tmux unbind "%"
 
 	tmux bind-key "C" command-prompt -p "Window Name: " "new-window -n '%%' -c '$HOME'"
 
 	tmux unbind-key "c"
-	tmux bind-key "c" new-window -n "local:$(hostname)" -c "#{pane_current_path}"
+	tmux bind-key "c" new-window -n "local:$(hostname)" -c "$HOME"
 }
 
 main() {
